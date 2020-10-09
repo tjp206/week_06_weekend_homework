@@ -3,39 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>Who is your favourite athlete?</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <script src='js/app.js'></script>
   </head>
   <body>
+    <h1>Tell us your favourite athlete & select why you like them:</h1>
     <form id="new-item-form">
       <div id="form-wrapper">
         <div class="form-item">
-          <label for="name" class="primary">Your Name</label>
+          <label for="name" class="primary">Your Name:</label><br>
           <input type="text" id="name" required/>
         </div>
 
         <div class="form-item">
-          <label for="athlete" class="primary">Favourite Athlete</label>
+          <label for="athlete" class="primary">Favourite Athlete:</label><br>
           <input type="text" id="athlete" required/>
         </div>
 
         <div class="form-item">
-          <label for="category" class="primary">Why do you like them?</label>
+          <label for="category" class="primary">Why do you like them?</label><br> 
           <select id="category">
             <option value="" disabled selected></option>
-            <option value="great">Obviously because they are great at their sport</option>
-            <option value="hot">Because he/she is hot af.</option>
-            <option value="role-model">I admire them as a role model</option>
-            <option value="obsessed">I'm obsessed & don't actually know why...</option>
+            <option value="Obviously because they are great at their sport">Obviously because they are great at their sport</option>
+            <option value="Because he/she is hot af.">Because he/she is hot af.</option>
+            <option value="I admire them as a role model">I admire them as a role model</option>
+            <option value="I'm obsessed & don't actually know why...">I'm obsessed & don't actually know why...</option>
           </select>
         </div>
-      </div>
-      <input type="submit" value="save"/>
+        <div>
+          <p>Are you happy to submit your answers?</p>
+          <input type="radio" id="yes" name="yes-no" value="Yes">
+          <label for="Yes">Yes</label><br>
+          <input type="radio" id="yes" name="yes-no" value="No">
+          <label for="No">No</label>
+        </div>
+      </div><br>
+      <input type="submit" value="Save"/>
     </form>
-
     <button id='delete-all'>Delete All</button>
 
-    <h1>Your favourite athletes & why:</h1>
+    <h1>Who you chose & why:</h1>
     <ul id="athlete-list"></ul>
   </body>
 
